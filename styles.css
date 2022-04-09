@@ -21,7 +21,7 @@ body {
 
 #main-box {
     border-radius: 5%;
-    width: 85%;
+    width: 90%;
     height: 50vh;
 
     position: absolute;
@@ -60,15 +60,34 @@ body {
     /* width: 100%; */
 }
 
+.quote::before {
+    content: open-quote;
+}
+
+.quote::after {
+    content: close-quote;
+}
+
 .divider-mobile {
-    padding: 1rem 0.8rem 0.8rem 0.8rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+    /* padding: 1rem 0.8rem 0.8rem 0.8rem; */
     
 }
 
 .circle {
-    position: relative;
-    top: 1.5rem;
-    right: -8.5rem;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    /* top: 1.5rem;
+    right: -8.5rem; */
+    bottom: -1.5rem;
     border-radius: 50%;
     height: 52px;
     width: 52px;
@@ -77,9 +96,9 @@ body {
 }
 
 .btn {
-    position: relative;
+    position: absolute;
     top: 0.4rem;
-    right: -6px;
+    right: 6px;
     height: 20px;
     background-color: var(--Neon-Green);
 }
@@ -89,3 +108,60 @@ body {
         0 0 1px 1px var(--Neon-Green),
         0 0 20px 5px var(--Neon-Green);
 }
+
+/* Made a mistake by creating the mobile responsiveness first */
+@media (max-width: 1440px) { 
+    #main-box {
+        position: absolute;
+        top: 0%;
+        bottom: 0%;
+        right: 0%;
+        left: 0%;
+        margin: auto;
+        height: 35vh;
+        width: 30%;
+        
+    }
+
+    .quote {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .divider-mobile {
+       position: absolute;
+       margin-left: auto;
+       margin-right: auto;
+       left: 0;
+       right: 0;
+    }
+
+    .circle {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        height: 48px;
+        width: 48px;
+        /* right: 12.5rem; */
+        bottom: -1.3rem;
+    }
+
+    .btn {
+        position: relative;
+        height: 18px;
+        width: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 0.4rem;
+    }
+
+    #header {
+        padding-top: 2rem;
+        font-size: 0.6rem;
+    }
+}  
