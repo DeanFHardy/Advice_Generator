@@ -14,13 +14,24 @@
 }
 
 body {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+   padding: 20px;
+   place-content: center;
    background-color: var(--Dark-Blue);
    font-family: 'Manrope', sans-serif;
 }
 
 
-#main-box {
+.main-box {
+    flex-basis: 100%;
+    min-height: 40vh;
+    max-width: 100rem;
     border-radius: 5%;
+    background-color: var(--Dark-Grayish-Blue);
+    /* 
     width: 90%;
     height: 50vh;
 
@@ -29,21 +40,19 @@ body {
     bottom: 0%;
     right: 0%;
     left: 0%;
-    margin: auto;
-
-   background-color: var(--Dark-Grayish-Blue);
+    margin: auto; */
     
-
-   
 }
 
-#header {
+.header {
     padding-top: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-small;
-    letter-spacing: 0.2rem;
+    flex-direction: column;
+    font-size: 2.5em;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
     color: var(--Neon-Green);
 }
 
@@ -54,7 +63,7 @@ body {
     justify-content: center;
     text-align: center;
     color: var(--Light-Cyan);
-    font-size: 1.3em;
+    font-size: 5em;
     word-spacing: 0.1em;
     line-height: 1.5em;
     /* width: 100%; */
@@ -69,99 +78,23 @@ body {
 }
 
 .divider-mobile {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    bottom: 3rem;
-    /* padding: 1rem 0.8rem 0.8rem 0.8rem; */
-    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 10em;
+    right: -8.5em;
+    width: 80%;
 }
 
 .circle {
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    /* top: 1.5rem;
-    right: -8.5rem; */
-    bottom: -1.5rem;
+    left: 43%;
+    bottom: 46rem;
+    display: flex;
     border-radius: 50%;
-    height: 52px;
-    width: 52px;
-    border: 10px solid var(--Neon-Green);
+    width: 12rem;
+    height: 12rem;
+    border: 50px solid var(--Neon-Green);
     background-color: var(--Neon-Green);
 }
 
-.btn {
-    position: absolute;
-    top: 0.4rem;
-    right: 6px;
-    height: 20px;
-    background-color: var(--Neon-Green);
-}
-
-.circle:hover {
-    box-shadow: 
-        0 0 1px 1px var(--Neon-Green),
-        0 0 20px 5px var(--Neon-Green);
-}
-
-/* Made a mistake by creating the mobile responsiveness first */
-@media (max-width: 1440px) { 
-    #main-box {
-        position: absolute;
-        top: 0%;
-        bottom: 0%;
-        right: 0%;
-        left: 0%;
-        margin: auto;
-        height: 35vh;
-        width: 30%;
-        
-    }
-
-    .quote {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .divider-mobile {
-       position: absolute;
-       margin-left: auto;
-       margin-right: auto;
-       left: 0;
-       right: 0;
-    }
-
-    .circle {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        height: 48px;
-        width: 48px;
-        /* right: 12.5rem; */
-        bottom: -1.3rem;
-    }
-
-    .btn {
-        position: relative;
-        height: 18px;
-        width: 18px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 0.4rem;
-    }
-
-    #header {
-        padding-top: 2rem;
-        font-size: 0.6rem;
-    }
-}  

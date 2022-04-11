@@ -1,5 +1,5 @@
 const adviceQuote = document.querySelector('.quote');
-const adviceId = document.getElementById('header');
+const adviceId = document.querySelector('.header');
 const dice = document.querySelector('.circle');
 let sllp, advice;
 
